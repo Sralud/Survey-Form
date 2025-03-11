@@ -41,6 +41,7 @@ label {
     font-weight: normal;
     font-size: 1.1rem;
     margin-right: 5px;
+    display: flex;
 }
 
 input[type="text"] {
@@ -67,7 +68,9 @@ input[type="text"] {
 .form-section {
     margin-bottom: 20px;
 }
-
+#food {
+    background-color: #255F38;
+}
 /* Checkbox and Radio Styles */
 .checkbox-group, .radio-group {
     margin-top: 5px;
@@ -96,9 +99,10 @@ textarea {
     width: 100%;
     height: 100px;
     padding: 5px;
-    border: 1px solid #999;
+    border: 1px solid #27391C;
     font-family: monospace;
     box-sizing: border-box;
+    background-color: #255F38;
 }
 
 /* Button Styles */
@@ -109,13 +113,13 @@ textarea {
 button {
     padding: 5px 15px;
     margin-right: 10px;
-    background-color: #e0e0e0;
-    border: 1px solid #999;
+    background-color: #255F38;
+    border: 1px solid #27391C;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #d0d0d0;
+    background-color: #18230F;
 }
 
 /* Responsive Adjustments */
