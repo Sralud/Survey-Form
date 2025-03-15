@@ -23,10 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedSports.push(checkbox.value);
         });
 
-        // Add sports array to form values
         formValues.sports = selectedSports.length > 0 ? selectedSports.join(', ') : 'None selected';
 
-        // Format the data for display
         let formattedData = `Survey Submission:\n\n`;
         formattedData += `First Name: ${formValues.firstName || 'Not provided'}\n`;
         formattedData += `Middle Initial: ${formValues.mi || 'Not provided'}\n`;
@@ -36,17 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
         formattedData += `Zip Code: ${formValues.zipCode || 'Not provided'}\n`;
         formattedData += `Sports: ${formValues.sports}\n`;
 
-        // Get selected year (radio button)
         const selectedYear = document.querySelector('input[name="year"]:checked');
         formattedData += `Year: ${selectedYear ? selectedYear.value : 'None selected'}\n`;
 
-        // Get favorite food
         formattedData += `Favorite Food: ${formValues.food || 'None selected'}\n`;
 
-        // Get comments
         formattedData += `Comments: ${formValues.comments || 'No comments provided'}`;
 
-        // Display form data in popup
         alert(formattedData);
 
         console.log('Form submitted with values:', formValues);
