@@ -56,11 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // form.reset();
     });
 
-    // Handle form clearing
     clearBtn.addEventListener('click', function() {
         form.reset();
 
-        // Ensure all checkboxes and radio buttons are unchecked
         document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(input => {
             input.checked = false;
         });
