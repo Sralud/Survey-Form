@@ -1,23 +1,18 @@
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Get form element (fixed ID issue)
+
     const form = document.getElementById('survey-form');
     const clearBtn = document.getElementById('clearBtn');
 
-    // Handle form submission
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
-        // Collect form data
         const formData = new FormData(form);
         let formValues = {};
 
-        // Convert FormData to regular object
         for (let [key, value] of formData.entries()) {
             formValues[key] = value;
         }
 
-        // Get selected sports (checkboxes can have multiple values)
         const selectedSports = [];
         document.querySelectorAll('input[name="sport"]:checked').forEach(checkbox => {
             selectedSports.push(checkbox.value);
