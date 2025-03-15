@@ -49,11 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Display form data in popup
         alert(formattedData);
 
-        // Log to console for debugging
         console.log('Form submitted with values:', formValues);
 
-        // Optional: Reset form after submission
-        // form.reset();
     });
 
     clearBtn.addEventListener('click', function() {
